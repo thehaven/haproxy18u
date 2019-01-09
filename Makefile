@@ -10,7 +10,7 @@ clean:
 
 install-prerequisites:
 	sudo yum install -y rpmdevtools pcre-devel openssl-devel zlib-devel lua53u-devel systemd-devel
-	sudo yum groupinstall -y 'Development Tools'
+	sudo yum install -y gcc libtool patch patchutils redhat-rpm-config rpm-build systemtap
 
 download-upstream:
 	test -s $(PWD)/SOURCES/haproxy-$(VERSION).tar.gz || wget -O $(PWD)/SOURCES/haproxy-$(VERSION).tar.gz http://www.haproxy.org/download/1.9/src/haproxy-$(VERSION).tar.gz
